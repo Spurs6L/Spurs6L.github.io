@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://spurs6l.github.io">
-  <title>window.onload的用法 | spursl&#39;blog</title>
+  <title>错误Unexpected end of input | spursl&#39;blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="放在onload中的js会等html加载完再执行函数。window.onload是在dom文档树加载完和所有文件加载完之后执行。">
-<meta name="keywords" content="js">
+  <meta name="description" content="Uncaught SyntaxError: Unexpected end of input 解决方法Unexpected end of input  的英文意思是“输入意外终止”通常造成这种错误的原因是应该成双的符号输入错误，比如说“”，‘’，{}，[]。好好检查一下代码是不是漏写了符号">
+<meta name="keywords" content="bug解决方法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="window.onload的用法">
-<meta property="og:url" content="https://spurs6l.github.io/2018/09/23/Window.onlaod的用法/index.html">
+<meta property="og:title" content="错误Unexpected end of input">
+<meta property="og:url" content="https://spurs6l.github.io/2018/06/23/错误Unexpected end of input/index.html">
 <meta property="og:site_name" content="spursl&#39;blog">
-<meta property="og:description" content="放在onload中的js会等html加载完再执行函数。window.onload是在dom文档树加载完和所有文件加载完之后执行。">
+<meta property="og:description" content="Uncaught SyntaxError: Unexpected end of input 解决方法Unexpected end of input  的英文意思是“输入意外终止”通常造成这种错误的原因是应该成双的符号输入错误，比如说“”，‘’，{}，[]。好好检查一下代码是不是漏写了符号">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-24T08:12:36.647Z">
+<meta property="og:updated_time" content="2018-09-24T08:40:41.199Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="window.onload的用法">
-<meta name="twitter:description" content="放在onload中的js会等html加载完再执行函数。window.onload是在dom文档树加载完和所有文件加载完之后执行。">
+<meta name="twitter:title" content="错误Unexpected end of input">
+<meta name="twitter:description" content="Uncaught SyntaxError: Unexpected end of input 解决方法Unexpected end of input  的英文意思是“输入意外终止”通常造成这种错误的原因是应该成双的符号输入错误，比如说“”，‘’，{}，[]。好好检查一下代码是不是漏写了符号">
   
     <link rel="alternative" href="/atom.xml" title="spursl&#39;blog" type="application/atom+xml">
   
@@ -159,33 +159,27 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Window.onlaod的用法" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-错误Unexpected end of input" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      window.onload的用法
+      错误Unexpected end of input
     </h1>
   
 
         
-        <a href="/2018/09/23/Window.onlaod的用法/" class="archive-article-date">
-  	<time datetime="2018-09-23T08:51:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-23</time>
+        <a href="/2018/06/23/错误Unexpected end of input/" class="archive-article-date">
+  	<time datetime="2018-06-23T08:51:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-23</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>放在onload中的js会等html加载完再执行函数。window.onload是在dom文档树加载完和所有文件加载完之后执行。<br><a id="more"></a></p>
-<h5 id="1、最简单的调用方式"><a href="#1、最简单的调用方式" class="headerlink" title="1、最简单的调用方式"></a>1、最简单的调用方式</h5><p>window.onload方法，可以定义html中的onload方法例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt; </span><br><span class="line">&lt;body onload=&quot;func()&quot;&gt; </span><br><span class="line">&lt;/body&gt; </span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
-<h5 id="2、在JS语句调用"><a href="#2、在JS语句调用" class="headerlink" title="2、在JS语句调用"></a>2、在JS语句调用</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt; </span><br><span class="line">function func()&#123;……&#125; </span><br><span class="line">window.onload=func; </span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="同时调用多个函数"><a href="#同时调用多个函数" class="headerlink" title="同时调用多个函数"></a>同时调用多个函数</h4><h5 id="3-直接写到html的body标签里面-如：-如果出错就把函数放在body前面"><a href="#3-直接写到html的body标签里面-如：-如果出错就把函数放在body前面" class="headerlink" title="3.直接写到html的body标签里面,如：(如果出错就把函数放在body前面)"></a>3.直接写到html的body标签里面,如：(如果出错就把函数放在body前面)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;window.onload&lt;/title&gt;</span><br><span class="line">&lt;body onload=&quot;one();two();three();</span><br><span class="line">          four();four();&quot;&gt;</span><br><span class="line">    &lt;ul &gt;</span><br><span class="line">        &lt;li class=&quot;one&quot; &gt;111&lt;/li&gt;</span><br><span class="line">        &lt;li class=&quot;two&quot;&gt;222&lt;/li&gt;</span><br><span class="line">        &lt;li class=&quot;three&quot;&gt;333&lt;/li&gt;</span><br><span class="line">        &lt;li class=&quot;four&quot;&gt;444&lt;/li&gt;</span><br><span class="line">        &lt;li class=&quot;fist&quot;&gt;555&lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        * &#123;</span><br><span class="line">            margin: 0;</span><br><span class="line">            padding: 0;</span><br><span class="line">        &#125;</span><br><span class="line">       </span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        </span><br><span class="line">        function one()&#123;</span><br><span class="line">            document.querySelector(&quot;.one&quot;).style.color=&quot;yellow&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        function two()&#123;</span><br><span class="line">            document.querySelector(&quot;.two&quot;).style.color=&quot;green&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        function three()&#123;</span><br><span class="line">            document.querySelector(&quot;.three&quot;).style.color=&quot;blue&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        function four()&#123;</span><br><span class="line">            document.querySelector(&quot;.four&quot;).style.color=&quot;pink&quot;;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<h5 id="4、js调用多个函数"><a href="#4、js调用多个函数" class="headerlink" title="4、js调用多个函数"></a>4、js调用多个函数</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"> window.onload=function() &#123;</span><br><span class="line">          one();</span><br><span class="line">          two();</span><br><span class="line">          three();</span><br><span class="line">          four();</span><br><span class="line">        &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="如果标签原来已经定义了onload方法，则可以通过eval-的方法，再追加自己的方法"><a href="#如果标签原来已经定义了onload方法，则可以通过eval-的方法，再追加自己的方法" class="headerlink" title="如果标签原来已经定义了onload方法，则可以通过eval()的方法，再追加自己的方法"></a>如果<body>标签原来已经定义了onload方法，则可以通过eval()的方法，再追加自己的方法</body></h4><p>方法一：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;window.onload&lt;/title&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">     function one()&#123;</span><br><span class="line">            document.querySelector(&quot;.one&quot;).style.color=&quot;yellow&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;body onload=&quot;one();&quot;&gt;</span><br><span class="line">    &lt;ul &gt;</span><br><span class="line">        &lt;li class=&quot;one&quot; &gt;111&lt;/li&gt;</span><br><span class="line">        &lt;li class=&quot;fist&quot;&gt;555&lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        * &#123;</span><br><span class="line">            margin: 0;</span><br><span class="line">            padding: 0;</span><br><span class="line">        &#125;</span><br><span class="line">       </span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">    //这个script链里的代码原则上应该写在&lt;body&gt;标签的后面</span><br><span class="line">        if(window.onload==null)&#123;</span><br><span class="line">           let f = document.querySelector(&quot;.fist&quot;);</span><br><span class="line">           window.onload=function()&#123;f.style.backgroundColor=&quot;grey&quot;;&#125;</span><br><span class="line">           &#125;else&#123;</span><br><span class="line">            console.log(window.onload.toString());</span><br><span class="line">           let fi = window.onload.toString(); </span><br><span class="line">            console.log(fi);</span><br><span class="line">            window.onload=function()&#123;</span><br><span class="line">        //eval() 函数计算 JavaScript 字符串，并把它作为脚本代码来执行。  </span><br><span class="line">        //如果参数是一个表达式，eval() 函数将执行表达式。如果参数是Javascript语句，eval()将执行 Javascript 语句。</span><br><span class="line">                eval(&quot;ff=&quot;+fi);//ff = function onload(event) &#123;one();&#125;</span><br><span class="line">                ff();//执行</span><br><span class="line">                let f = document.querySelector(&quot;.fist&quot;);</span><br><span class="line">                f.style.backgroundColor=&quot;grey&quot;;&#125;</span><br><span class="line">           &#125;</span><br><span class="line"></span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
-<p>方法二:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;window.onload&lt;/title&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">     function fist()&#123;</span><br><span class="line">            document.querySelector(&quot;.fist&quot;).style.color=&quot;grey&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;body onload=&quot;fist();&quot;&gt;</span><br><span class="line">    &lt;ul &gt;</span><br><span class="line">        &lt;li class=&quot;one&quot; &gt;111&lt;/li&gt;</span><br><span class="line">        &lt;li class=&quot;two&quot;&gt;222&lt;/li&gt;</span><br><span class="line">        &lt;li class=&quot;three&quot;&gt;333&lt;/li&gt;</span><br><span class="line">        &lt;li class=&quot;fist&quot;&gt;555&lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        * &#123;</span><br><span class="line">            margin: 0;</span><br><span class="line">            padding: 0;</span><br><span class="line">        &#125;</span><br><span class="line">       </span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        function one()&#123;</span><br><span class="line">            document.querySelector(&quot;.one&quot;).style.color=&quot;yellow&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        function two()&#123;</span><br><span class="line">            document.querySelector(&quot;.two&quot;).style.color=&quot;green&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        function three()&#123;</span><br><span class="line">            document.querySelector(&quot;.three&quot;).style.color=&quot;blue&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">         function addLoadEvent(func)&#123; </span><br><span class="line">            var oldonload=window.onload; </span><br><span class="line">            if(typeof window.onload!=&quot;function&quot;)&#123; </span><br><span class="line">                window.onload=func; </span><br><span class="line">            &#125; </span><br><span class="line">            else&#123; </span><br><span class="line">               window.onload=function()&#123; </span><br><span class="line">                oldonload(); </span><br><span class="line">                func(); </span><br><span class="line">               &#125; </span><br><span class="line">            &#125; </span><br><span class="line">         &#125;</span><br><span class="line">         addLoadEvent(one);</span><br><span class="line">         addLoadEvent(two); </span><br><span class="line">         addLoadEvent(three); </span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+        <p>Uncaught SyntaxError: Unexpected end of input 解决方法<br>Unexpected end of input  的英文意思是“输入意外终止”<br>通常造成这种错误的原因是应该成双的符号输入错误，比如说“”，‘’，{}，[]。好好检查一下代码是不是漏写了符号</p>
 
       
 
@@ -220,7 +214,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">bug解决方法</a>
         		</li>
       		
 		</ul>
@@ -276,7 +270,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://spurs6l.github.io/2018/09/23/Window.onlaod的用法/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://spurs6l.github.io/2018/06/23/错误Unexpected end of input/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -290,18 +284,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/09/23/hexo配置头像/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/09/23/JS事件代理/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          hexo配置头像
+          JS事件代理
         
       </div>
     </a>
   
   
-    <a href="/2018/09/23/JS事件代理/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JS事件代理</div>
+    <a href="/2017/08/23/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
       <i class="icon-circle-right"></i>
     </a>
   
