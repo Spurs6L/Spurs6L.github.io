@@ -8,20 +8,20 @@
   <link rel="dns-prefetch" href="https://spurs6l.github.io">
   <title>vue学习之路（一）：新建一个vue项目 | spursl&#39;blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="新建一个vue项目1.全局安装vue-cli3.0cmd运行 1npm install @vue/cli -g 2.新建一个你需要放置vue项目的目录，cd进入到这个目录，运行命令1vue create wuliao(wuliao是vue项目的名称) 之后会给你手动选择特性(用上下键控制选择，空格键确定或不确定 。选好按enter键) 123456789--&amp;gt; Manually select">
+  <meta name="description" content="首先在创建vue项目之前，需要搭建Vue.js 的运行环境 ，需要安装node.js。">
 <meta name="keywords" content="vue">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue学习之路（一）：新建一个vue项目">
 <meta property="og:url" content="https://spurs6l.github.io/2018/09/23/vue学习之路（一）：新建一个vue项目/index.html">
 <meta property="og:site_name" content="spursl&#39;blog">
-<meta property="og:description" content="新建一个vue项目1.全局安装vue-cli3.0cmd运行 1npm install @vue/cli -g 2.新建一个你需要放置vue项目的目录，cd进入到这个目录，运行命令1vue create wuliao(wuliao是vue项目的名称) 之后会给你手动选择特性(用上下键控制选择，空格键确定或不确定 。选好按enter键) 123456789--&amp;gt; Manually select">
+<meta property="og:description" content="首先在创建vue项目之前，需要搭建Vue.js 的运行环境 ，需要安装node.js。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://spurs6l.github.io/2018/09/23/vue学习之路（一）：新建一个vue项目/“https://wx3.sinaimg.cn/mw690/005GkBR6gy1fvjm69mr16j30if0bit8n.jpg”">
-<meta property="og:updated_time" content="2018-09-23T10:18:44.713Z">
+<meta property="og:image" content="https://i.loli.net/2018/09/24/5ba7b8d40370b.png">
+<meta property="og:updated_time" content="2018-09-24T05:38:59.047Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue学习之路（一）：新建一个vue项目">
-<meta name="twitter:description" content="新建一个vue项目1.全局安装vue-cli3.0cmd运行 1npm install @vue/cli -g 2.新建一个你需要放置vue项目的目录，cd进入到这个目录，运行命令1vue create wuliao(wuliao是vue项目的名称) 之后会给你手动选择特性(用上下键控制选择，空格键确定或不确定 。选好按enter键) 123456789--&amp;gt; Manually select">
-<meta name="twitter:image" content="https://spurs6l.github.io/2018/09/23/vue学习之路（一）：新建一个vue项目/“https://wx3.sinaimg.cn/mw690/005GkBR6gy1fvjm69mr16j30if0bit8n.jpg”">
+<meta name="twitter:description" content="首先在创建vue项目之前，需要搭建Vue.js 的运行环境 ，需要安装node.js。">
+<meta name="twitter:image" content="https://i.loli.net/2018/09/24/5ba7b8d40370b.png">
   
     <link rel="alternative" href="/atom.xml" title="spursl&#39;blog" type="application/atom+xml">
   
@@ -181,14 +181,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="新建一个vue项目"><a href="#新建一个vue项目" class="headerlink" title="新建一个vue项目"></a>新建一个vue项目</h4><h5 id="1-全局安装vue-cli3-0"><a href="#1-全局安装vue-cli3-0" class="headerlink" title="1.全局安装vue-cli3.0"></a>1.全局安装vue-cli3.0</h5><p>cmd运行</p>
+        <hr>
+<p>首先在创建vue项目之前，需要搭建Vue.js 的运行环境 ，需要安装node.js。</p>
+<a id="more"></a>
+<h5 id="node-js安装方法"><a href="#node-js安装方法" class="headerlink" title="node.js安装方法"></a>node.js安装方法</h5><ol>
+<li>官网 <a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">https://nodejs.org/zh-cn/</a> 下载（一般下载推荐的）</li>
+<li>点击安装包安装，一直next就可以了，不用更改什么</li>
+<li>之后cmd运行 <code>node -v</code>(node后面有一个空格)+回车 ，之后会出现你安装的node的版本，表示安装成功。</li>
+<li>安装完node.js之后就可以安装npm，(之后安装创建项目都需要用到npm命令)。安装完npm之后就可以开始创建vue项目啦<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm i npm </span><br><span class="line">npm i npm -g</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h5 id="1-全局安装vue-cli3-0"><a href="#1-全局安装vue-cli3-0" class="headerlink" title="1.全局安装vue-cli3.0"></a>1.全局安装vue-cli3.0</h5><p>cmd运行</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install @vue/cli -g</span><br></pre></td></tr></table></figure>
 <h5 id="2-新建一个你需要放置vue项目的目录，cd进入到这个目录，运行命令"><a href="#2-新建一个你需要放置vue项目的目录，cd进入到这个目录，运行命令" class="headerlink" title="2.新建一个你需要放置vue项目的目录，cd进入到这个目录，运行命令"></a>2.新建一个你需要放置vue项目的目录，cd进入到这个目录，运行命令</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue create wuliao(wuliao是vue项目的名称)</span><br></pre></td></tr></table></figure>
 <p>之后会给你手动选择特性(用上下键控制选择，空格键确定或不确定 。选好按enter键)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">--&gt; Manually select features(手动选择特性)</span><br><span class="line">--&gt; Babel、Router、CSS Pre-processors、Linter/Formatter（勾选该4个选项。上下键移动选择位置，空格键确定或取消）</span><br><span class="line">--&gt; SCSS/SASS</span><br><span class="line">--&gt; ESLint + Airbnb config</span><br><span class="line">--&gt; 两个都不勾选</span><br><span class="line">--&gt; In package.json</span><br><span class="line"></span><br><span class="line">注：ESLint属于纠正格式错误的插件，可以在webstorm中设置快速纠正快捷键。(可不选)</span><br><span class="line">若项目目录下没有node_modeules文件夹，则运行npm i 引入包</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">--&gt; Manually select features(手动选择特性)</span><br><span class="line">--&gt; Babel、Router、CSS Pre-processors、Linter/Formatter（勾选该4个选项。上下键移动选择位置，空格键确定或取消）</span><br><span class="line">--&gt; SCSS/SASS (这是一个css的预处理器，如果你没安装，可不选)</span><br><span class="line">--&gt; ESLint + Airbnb config</span><br><span class="line">--&gt; 两个都不勾选</span><br><span class="line">--&gt; In package.json</span><br><span class="line"></span><br><span class="line">注：ESLint属于纠正格式错误的插件，可以在webstorm中设置快速纠正快捷键。(可不选)</span><br><span class="line">若项目目录下没有node_modeules文件夹，则运行npm i 引入包</span><br></pre></td></tr></table></figure>
 <p>创建成功后，运行</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd wuliao(进入到vue项目)</span><br><span class="line">npm run serve (运行vue项目)</span><br></pre></td></tr></table></figure>
-<p><img src="“https://wx3.sinaimg.cn/mw690/005GkBR6gy1fvjm69mr16j30if0bit8n.jpg”" alt="“vue创建承成功”"></p>
+<p><img src="https://i.loli.net/2018/09/24/5ba7b8d40370b.png" alt="vv"></p>
+<p>到此，vue项目就创建成功啦，在浏览器中输入local的地址就能看到vue的欢迎页面。</p>
 
       
 
@@ -292,6 +303,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/09/24/在hexo博文中插入图片的方式/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          在hexo博文中插入图片的方式
+        
+      </div>
+    </a>
   
   
     <a href="/2018/09/23/hexo配置头像/" id="article-nav-older" class="article-nav-link-wrap">
